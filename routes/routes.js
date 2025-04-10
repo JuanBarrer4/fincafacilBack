@@ -1,5 +1,5 @@
 import express from 'express';
-import { welcome, loginUser } from '../controller/loginController.js'; // Asegúrate de que la ruta sea correcta
+import { welcome, loginUser } from '../controllers/loginController.js'; // Asegúrate de que la ruta sea correcta
 
 const router = express.Router();
 

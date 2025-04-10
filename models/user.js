@@ -1,12 +1,11 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-    nombre: { type: String, required: true },
-    usuario: { type: String, required: true, unique: true },
-    contraseña: { type: String, required: true },
-    rol: { type: String, enum: ['dueño', 'veterinario', 'encargado'], required: true }
+    nombre: String,
+    usuario: { type: String, unique: true },
+    contraseña: String,
+    rol: { type: String, enum: ['dueño', 'veterinario', 'encargado'] }
 });
 
-const User = mongoose.model('User', userSchema);
-
+const User = mongoose.models.User || mongoose.model('User', userSchema);
 export default User;

@@ -1,8 +1,4 @@
-import User from '../models/user.js';
-
-export const welcome = (req, res) => {
-    res.send('API LISTA!');
-};
+import User from '../models/User.js';
 
 export const loginUser = async (req, res) => {
     const { usuario, contraseña } = req.body;
